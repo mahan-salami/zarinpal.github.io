@@ -1,0 +1,13 @@
+@import "tailwindcss";
+body{
+    font-family: KalamehWeb_Bold ;
+    src: url(KalamehWeb_Bold.ttf);
+    background: #f5f5f5;
+}
+
+
+@font-face {
+    font-family: KalamehWeb_Bold ;
+    src: url(KalamehWeb_Bold.ttf);
+    font-weight: bolder;
+}
