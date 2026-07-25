@@ -1,91 +1,147 @@
-import { FaTelegram, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { Globe } from "lucide-react"; // اضافه شده
-import Logo from "../assets/logo/zarinpal-logo.svg";
+import React from "react";
 
-export default function Footer() {
+import azki from "../assets/footer/azki-logo-simple.svg";
+import bimeMarkazi from "../assets/footer/markazi.webp";
+import enamad from "../assets/footer/enamad.png";
+import kasbokar from "../assets/footer/work.webp";
+import danesh from "../assets/footer/danesh-bonyan.webp";
+
+import {
+  FaMapMarkerAlt,
+  FaEnvelope,
+} from "react-icons/fa";
+
+const Footer = () => {
   return (
-    <footer className="bg-white mt-10" dir="rtl">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* بخش لینک‌ها */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-700 text-sm">
-          {/* ستون منابع */}
-          <div>
-            <h3 className="font-bold mb-4">منابع</h3>
-            <ul className="space-y-2">
-              <li><a href="#">درگاه پرداخت اینترنتی</a></li>
-              <li><a href="#">تسویه مستقیم</a></li>
-              <li><a href="#">پی‌پرو (Pay-Row)</a></li>
-              <li><a href="#">توسعه‌دهندگان</a></li>
-              <li><a href="#">اپلیکیشن موبایل</a></li>
-              <li><a href="#">وبلاگ</a></li>
-              <li><a href="#">دریافت شماره شبا</a></li>
-              <li><a href="#">سوالات متداول</a></li>
-              <li><a href="#">همکاری در فروش</a></li>
-              <li><a href="#">کشف باگ زرین‌پال</a></li>
-              <li><a href="#">تعرفه‌ها</a></li>
+    <footer
+      className="bg-gradient-to-r from-[#fdf7eb] to-[#eef8ff] py-16 px-10"
+     
+    >
+      <div className="container mx-auto px-6">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+
+          {/* لوگوها */}
+          <div className="grid grid-cols-2 gap-8 justify-items-center py-24 lg:-mt-20 lg:ml-10">
+            <img
+              src={bimeMarkazi}
+              alt=""
+              className="w-28 object-contain"
+            />
+
+            <img
+              src={enamad}
+              alt=""
+              className="w-24 object-contain"
+            />
+
+            <img
+              src={kasbokar}
+              alt=""
+              className="w-44 object-contain"
+            />
+
+            <img
+              src={danesh}
+              alt=""
+              className="w-18 object-contain"
+            />
+          </div>
+
+          {/* خدمات مشتریان */}
+          <div className="text-center lg:text-right">
+            <h2 className="text-blue-700 font-bold text-xl mb-6">
+              خدمات مشتریان
+            </h2>
+
+            <ul className="space-y-4 text-gray-800">
+              <li className="hover:text-blue-700 transition  cursor-pointer">ازکی کلاب</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">بیمه اقساطی خودرو</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">خسارت آنلاین</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">بخشودگی جرایم بیمه</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">استعلام بیمه شخص ثالث</li>
             </ul>
           </div>
 
-          {/* ستون زرین‌پال */}
-          <div>
-            <h3 className="font-bold mb-4">زرین‌پال</h3>
-            <ul className="space-y-2">
-              <li><a href="#">تماس با ما</a></li>
-              <li><a href="#">پیگیری تراکنش</a></li>
-              <li><a href="#">درباره ما</a></li>
-              <li><a href="#">حریم خصوصی</a></li>
-              <li><a href="#">قوانین و مقررات</a></li>
+          {/* بیمه ها */}
+          <div className="text-center lg:text-right">
+            <h2 className="text-blue-700 font-bold text-xl mb-6">
+              بیمه‌ها
+            </h2>
+
+            <ul className="space-y-4 text-gray-800">
+              <li className="hover:text-blue-700 transition  cursor-pointer">بیمه شخص ثالث</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">بیمه بدنه</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">بیمه موتورسیکلت</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">بیمه درمان تکمیلی</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">بیمه آتش سوزی</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">بیمه مسافرتی</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">بیمه عمر</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">بیمه مسئولیت پزشکان</li>
             </ul>
           </div>
 
-          {/* ستون خدمات بیشتر */}
-          <div>
-            <h3 className="font-bold mb-4">خدمات بیشتر</h3>
-            <ul className="space-y-2">
-              <li><a href="#">نئوزرین</a></li>
-              <li><a href="#">زرین‌اکسپرس</a></li>
-              <li><a href="#">زرین‌پلاس</a></li>
-              <li><a href="#">زرین‌کارت</a></li>
-              <li><a href="#">زرین‌دکس</a></li>
+          {/* دسترسی سریع */}
+          <div className="text-center lg:text-right">
+            <h2 className="text-blue-700 font-bold text-xl mb-6">
+              دسترسی سریع
+            </h2>
+
+            <ul className="space-y-4 text-gray-800">
+              <li className="hover:text-blue-700 transition  cursor-pointer">پنل فروشندگان</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">شرایط و قوانین</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">سوالات متداول</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">همکاری با نماینده‌های بیمه</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">تماس با ما</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">درباره ما</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">بلاگ ازکی</li>
+              <li className="hover:text-blue-700 transition  cursor-pointer">فرصت‌های شغلی</li>
             </ul>
           </div>
+
+          {/* درباره ازکی */}
+          <div className="text-center lg:text-right">
+
+            <img
+              src={azki}
+              alt=""
+              className="w-36 mb-6 mx-auto lg:mx-0 lg:ml-20"
+            />
+
+            <p className="text-gray-700 leading-9 text-[17px]">
+              ازکی شرکت بیمه نیست؛ با ازکی آنلاین شرکت‌های بیمه را
+              باهم مقایسه کنید و با خیال راحت بیمه بخرید.
+              به کمک ازکی می‌توانید قبل از خرید درباره انواع
+              مختلف بیمه، پوشش‌ها و قیمتشان اطلاعات دقیق و کامل
+              کسب کنید.
+            </p>
+
+            <div className="flex items-start gap-3 mt-8">
+
+              <p className="text-gray-700 leading-8">
+                خیابان ولیعصر، بالاتر از پارک ساعی،
+                بن‌بست یاس، پلاک ۱
+              </p>
+                            <FaMapMarkerAlt
+                className="text-gray-500 mt-1"
+              />
+            </div>
+
+            <div className="flex items-center gap-3 mt-5 lg:ml-34">
+             
+              <span className="text-gray-700">
+                info@azki.com
+              </span>
+               <FaEnvelope className="text-gray-500" />
+            </div>
+
+          </div>
+
         </div>
 
-        <div
-          className=" border-gray-300 px-6 sm:px-12 lg:px-20 py-6"
-          dir="ltr"
-        >
-          {/* بخش بالا: قوانین و شبکه‌های اجتماعی */}
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-gray-300 pb-4 mt-10">
-            {/* قوانین */}
-
-
-            {/* شبکه‌های اجتماعی */}
-            <div className="flex gap-4 text-xl text-gray-700">
-              <a href="#" className="hover:text-cyan-600"><FaGithub /></a>
-              <a href="#" className="hover:text-cyan-600"><FaLinkedin /></a>
-              <a href="#" className="hover:text-cyan-600"><FaTelegram /></a>
-              <a href="#" className="hover:text-cyan-600"><FaInstagram /></a>
-              <a href="#" className="hover:text-cyan-600"><FaXTwitter /></a>
-            </div>
-            <div className="flex items-center gap-2">
-              <img src={Logo} alt="zarinpal" className="h-6" />
-            </div>
-          </div>
-
-          {/* بخش پایین: لوگو + نماد + انتخاب زبان */}
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-6 pt-6">
-            {/* لوگو */}
-
-
-
-          </div>
-        </div>
-
-        {/* کپی‌رایت */}
-        <p className="mt-4 md:mt-0 justify-center text-center">© ۱۴۰۴ - ۱۳۸۹ زرین‌پال</p>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

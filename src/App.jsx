@@ -1,30 +1,35 @@
 import Nav from '../src/Componnents/Nav'
-import Companylogo from './Componnents/Companylogo'
-import Hero from './Componnents/Hero'
-import Card from './Componnents/Card'
-import Pardakht from './Componnents/Pardakht'
-import Mobile from './Componnents/Mobile'
-import Dev from './Componnents/Dev'
-import Testimonials from './Componnents/Testimonials'
-import Faq from '../src/Componnents/Faq'
-import Butt from './Componnents/Butt'
+import Box from './Componnents/Box'
+import Chera from './Componnents/Chera'
+import Dastavard from './Componnents/Dastavard'
+import Khadamat from './Componnents/Khadamat'
+import Slide from './Componnents/Slide'
+import Slidetwo from './Componnents/Slidetwo'
+import Mazaya from './Componnents/mazaya'
+import Comment from './Componnents/Comment'
+import InsuranceSection from './Componnents/InsuranceSection'
+import Dastresi from './Componnents/Dastresi'
 import Footer from './Componnents/Footer'
+
+
 
 function App() {
   
 
   return (
     <>
+    
     <Nav/>
-    <Hero/>
-    <Companylogo/>
-    <Card/>
-    <Pardakht/>
-    <Dev/>
-    <Mobile/>
-    <Testimonials/>
-    <Faq/>
-    <Butt/>
+    <Slide/>
+    <Khadamat/>
+    <Slidetwo/>
+    <Box/>
+    <Chera/>
+    <Mazaya/>
+    <Dastavard/>
+    <Comment/>
+    <InsuranceSection/>
+    <Dastresi/>
     <Footer/>
     </>
   )
